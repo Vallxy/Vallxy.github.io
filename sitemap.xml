@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://Vallxy.github.io/categories/</loc>
-    <lastmod>2020-09-11T21:52:48+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://Vallxy.github.io/post/</loc>
     <lastmod>2020-09-11T21:52:48+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Vallxy.github.io/categories/scala/</loc>
+    <loc>https://Vallxy.github.io/tags/scala/</loc>
+    <lastmod>2020-09-11T21:52:48+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Vallxy.github.io/tags/</loc>
     <lastmod>2020-09-11T21:52:48+08:00</lastmod>
   </url>
   
@@ -28,7 +28,7 @@
   </url>
   
   <url>
-    <loc>https://Vallxy.github.io/categories/courses/</loc>
+    <loc>https://Vallxy.github.io/tags/courses/</loc>
     <lastmod>2020-09-04T00:49:04+08:00</lastmod>
   </url>
   
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://Vallxy.github.io/tags/</loc>
+    <loc>https://Vallxy.github.io/categories/</loc>
   </url>
   
 </urlset>

@@ -6,28 +6,9 @@
     <description>Recent content in Categories on Website of csh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 11 Sep 2020 21:52:48 +0800</lastBuildDate>
     
 	<atom:link href="https://Vallxy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>scala</title>
-      <link>https://Vallxy.github.io/categories/scala/</link>
-      <pubDate>Fri, 11 Sep 2020 21:52:48 +0800</pubDate>
-      
-      <guid>https://Vallxy.github.io/categories/scala/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>courses</title>
-      <link>https://Vallxy.github.io/categories/courses/</link>
-      <pubDate>Fri, 04 Sep 2020 00:49:04 +0800</pubDate>
-      
-      <guid>https://Vallxy.github.io/categories/courses/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
