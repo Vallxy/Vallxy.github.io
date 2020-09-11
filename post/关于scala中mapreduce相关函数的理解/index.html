@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Cao Shaoheng | 关于scala中MapReduce相关函数的理解 </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.74.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="">
+    
+    <link rel="stylesheet" href="https://Vallxy.github.io/css/style.min.6944b209e291f52d1446204b7dc94a03d0156e3ab359b6ae37a54ab33a7230d4.css" integrity="sha256-aUSyCeKR9S0URiBLfclKA9AVbjqzWbauN6VKszpyMNQ=" crossorigin="anonymous" type="text/css"><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="https://Vallxy.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://Vallxy.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://Vallxy.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://Vallxy.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://Vallxy.github.io/post/%E5%85%B3%E4%BA%8Escala%E4%B8%ADmapreduce%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E7%9A%84%E7%90%86%E8%A7%A3/">
+    
+    
+    <script type="text/javascript" src="https://Vallxy.github.io/js/anatole-header.min.7e2fc0724240b28c6e214687e73a4a6eb6c196bbace546b9dc86e94cca120b5c.js" integrity="sha256-fi/AckJAsoxuIUaH5zpKbrbBlrus5Ua53IbpTMoSC1w=" crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://Vallxy.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="关于scala中MapReduce相关函数的理解"/>
+<meta name="twitter:description" content=""/>
+
+</head><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://Vallxy.github.io/images/profile.JPG" alt="profile picture">
+        <h3 title=""><a href="/">I&#39;m csh</a></h3>
+        <div class="description">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://github.com/Biadlo" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="mailto:1010047186@qq.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Cao Shaoheng 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+        
+        <li><a  href="/"  title="">Home</a></li>
+        
+        
+        <li><a  href="/post/"  title="">Posts</a></li>
+        
+        
+        <li><a  href="/about/"  title="">About</a></li>
+        
+        
+        <li class="theme-switch-item">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+        </li>
+    </ul>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>关于scala中MapReduce相关函数的理解
+        </h3>
+        
+        <div class="info">
+          <i class="fa fa-sun-o"></i>
+          <span class="date">Fri, Sep 11, 2020</span>
+          <i class="fa fa-clock-o"></i><span class="reading-time">3-minute read</span>
+        </div>
+        
+        </div>
+
+    <h3 id="关于scala中mapreduce相关函数的理解">关于scala中MapReduce相关函数的理解</h3>
+<h4 id="1-groupby">1. groupBy</h4>
+<h5 id="11-官方文档">1.1 官方文档</h5>
+<pre><code>def groupBy[K](f: (A) =&gt; K): Map[K, List[A]]
+Partitions this iterable collection into a map of iterable collections according to some discriminator function.
+
+Note: Even when applied to a view or a lazy collection it will always force the elements.
+
+K
+the type of keys returned by the discriminator function.
+
+f
+the discriminator function.
+
+returns
+A map from keys to iterable collections such that the following invariant holds:
+
+(xs groupBy f)(k) = xs filter (x =&gt; f(x) == k)
+That is, every key k is bound to a iterable collection of those elements x for which f(x) equals k.
+
+Definition Classes
+IterableOps
+</code></pre><h5 id="12-示例代码">1.2 示例代码</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">object</span> <span style="color:#a6e22e">test</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">def</span> main<span style="color:#f92672">(</span>args<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Array</span><span style="color:#f92672">[</span><span style="color:#66d9ef">String</span><span style="color:#f92672">])</span><span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Unit</span> <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">val</span> arr <span style="color:#66d9ef">=</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;he&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;he&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;d&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">val</span> result <span style="color:#66d9ef">=</span> arr<span style="color:#f92672">.</span>groupBy<span style="color:#f92672">(</span>identity<span style="color:#f92672">)</span>
+    print<span style="color:#f92672">(</span>result<span style="color:#f92672">)</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>输出结果：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a6e22e">HashMap</span><span style="color:#f92672">(</span>a <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">(</span>a<span style="color:#f92672">),</span> b <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">(</span>b<span style="color:#f92672">),</span> he <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">(</span>he<span style="color:#f92672">,</span> he<span style="color:#f92672">),</span> c <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">(</span>c<span style="color:#f92672">,</span> c<span style="color:#f92672">),</span> d <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">(</span>d<span style="color:#f92672">))</span>
+</code></pre></div><p>个人理解:</p>
+<p>映射函数例如f: (A) =&gt; K，相当于把每一个list中的元素作为参数输入映射函数，得到结果为K，K就作为Key，输入作为value</p>
+<p>如：x=&gt;x+1</p>
+<p>​		identity(i=&gt;i)</p>
+<h4 id="2-groupmap">2. groupMap</h4>
+<h5 id="21-官方文档">2.1 官方文档</h5>
+<pre><code>def groupMap[K, B](key: (A) =&gt; K)(f: (A) =&gt; B): Map[K, List[B]]
+
+Partitions this iterable collection into a map of iterable collections according to a discriminator function key. Each element in a group is transformed into a value of type B using the value function.
+
+It is equivalent to groupBy(key).mapValues(_.map(f)), but more efficient.
+
+case class User(name: String, age: Int)
+
+def namesByAge(users: Seq[User]): Map[Int, Seq[String]] =
+  users.groupMap(_.age)(_.name)
+Note: Even when applied to a view or a lazy collection it will always force the elements.
+
+K
+the type of keys returned by the discriminator function
+
+B
+the type of values returned by the transformation function
+
+key
+the discriminator function
+
+f
+the element transformation function
+
+Definition Classes
+IterableOps
+</code></pre><h5 id="22-示例代码">2.2 示例代码</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">object</span> <span style="color:#a6e22e">test</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">def</span> main<span style="color:#f92672">(</span>args<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Array</span><span style="color:#f92672">[</span><span style="color:#66d9ef">String</span><span style="color:#f92672">])</span><span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Unit</span> <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">val</span> arr <span style="color:#66d9ef">=</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;he&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;he&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;d&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">val</span> result <span style="color:#66d9ef">=</span> arr<span style="color:#f92672">.</span>groupBy<span style="color:#f92672">(</span>identity<span style="color:#f92672">)</span>
+    print<span style="color:#f92672">(</span>result<span style="color:#f92672">)</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>输出结果：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a6e22e">HashMap</span><span style="color:#f92672">(</span>a <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">),</span> b <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">),</span> he <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">),</span> c <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">),</span> d <span style="color:#f92672">-&gt;</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">))</span>
+</code></pre></div><p>个人理解：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">def</span> groupMap<span style="color:#f92672">[</span><span style="color:#66d9ef">K</span>, <span style="color:#66d9ef">B</span><span style="color:#f92672">](</span>key<span style="color:#66d9ef">:</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">A</span><span style="color:#f92672">)</span> <span style="color:#f92672">=&gt;</span> K<span style="color:#f92672">)(</span>f<span style="color:#66d9ef">:</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">A</span><span style="color:#f92672">)</span> <span style="color:#f92672">=&gt;</span> B<span style="color:#f92672">)</span><span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Map</span><span style="color:#f92672">[</span><span style="color:#66d9ef">K</span>, <span style="color:#66d9ef">List</span><span style="color:#f92672">[</span><span style="color:#66d9ef">B</span><span style="color:#f92672">]]</span>
+</code></pre></div><p>在groupBy上的基础上把key：value中的value再次映射到一个新的值，例子中就是全映射成1，这样的话如果要统计可以直接reduce</p>
+<h4 id="3groupmapreduce">3.groupMapReduce</h4>
+<h5 id="31-官方文档">3.1 官方文档</h5>
+<pre><code>def groupMapReduce[K, B](key: (A) =&gt; K)(f: (A) =&gt; B)(reduce: (B, B) =&gt; B): Map[K, B]
+Partitions this iterable collection into a map according to a discriminator function key. All the values that have the same discriminator are then transformed by the value function and then reduced into a single value with the reduce function.
+
+It is equivalent to groupBy(key).mapValues(_.map(f).reduce(reduce)), but more efficient.
+
+def occurrences[A](as: Seq[A]): Map[A, Int] =
+  as.groupMapReduce(identity)(_ =&gt; 1)(_ + _)
+Note: Even when applied to a view or a lazy collection it will always force the elements.
+
+Definition Classes
+IterableOps
+</code></pre><h5 id="32-示例代码">3.2 示例代码</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">object</span> <span style="color:#a6e22e">test</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">def</span> main<span style="color:#f92672">(</span>args<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Array</span><span style="color:#f92672">[</span><span style="color:#66d9ef">String</span><span style="color:#f92672">])</span><span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Unit</span> <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">val</span> arr <span style="color:#66d9ef">=</span> <span style="color:#a6e22e">List</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;he&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;he&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;d&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">val</span> result <span style="color:#66d9ef">=</span> arr<span style="color:#f92672">.</span>groupMapReduce<span style="color:#f92672">(</span>identity<span style="color:#f92672">)(</span><span style="color:#66d9ef">_=&gt;</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)(</span><span style="color:#66d9ef">_</span><span style="color:#f92672">+</span><span style="color:#66d9ef">_</span><span style="color:#f92672">)</span>
+    print<span style="color:#f92672">(</span>result<span style="color:#f92672">)</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>输出结果：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a6e22e">HashMap</span><span style="color:#f92672">(</span>a <span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> b <span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> he <span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">,</span> c <span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">,</span> d <span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>
+</code></pre></div><p>个人理解：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">def</span> groupMapReduce<span style="color:#f92672">[</span><span style="color:#66d9ef">K</span>, <span style="color:#66d9ef">B</span><span style="color:#f92672">](</span>key<span style="color:#66d9ef">:</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">A</span><span style="color:#f92672">)</span> <span style="color:#f92672">=&gt;</span> K<span style="color:#f92672">)(</span>f<span style="color:#66d9ef">:</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">A</span><span style="color:#f92672">)</span> <span style="color:#f92672">=&gt;</span> B<span style="color:#f92672">)(</span>reduce<span style="color:#66d9ef">:</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">B</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">B</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">=&gt;</span> B<span style="color:#f92672">)</span><span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Map</span><span style="color:#f92672">[</span><span style="color:#66d9ef">K</span>, <span style="color:#66d9ef">B</span><span style="color:#f92672">]</span>
+</code></pre></div><p>在groupMap的基础上进行一个reduce操作</p>
+<p>通过例子中的函数可以完成wordCount</p>
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+<span class="separator"><a class="category" href="/categories/scala/">scala</a></span>
+
+        
+      </div>
+    </div>
+
+    
+           
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://Vallxy.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript" src="https://Vallxy.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://Vallxy.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script></html></body>
+
+</html>
