@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Website of csh</title>
-    <link>https://Vallxy.github.io/</link>
-    <description>Recent content on Website of csh</description>
+    <title>course on Website of csh</title>
+    <link>https://Vallxy.github.io/tags/course/</link>
+    <description>Recent content in course on Website of csh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 11 Sep 2020 22:10:05 +0800</lastBuildDate>
     
-	<atom:link href="https://Vallxy.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://Vallxy.github.io/tags/course/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,15 +17,6 @@
       <pubDate>Fri, 11 Sep 2020 22:10:05 +0800</pubDate>
       
       <guid>https://Vallxy.github.io/post/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>scala中MapReduce相关函数的理解</title>
-      <link>https://Vallxy.github.io/post/scala%E4%B8%ADmapreduce%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E7%9A%84%E7%90%86%E8%A7%A3/</link>
-      <pubDate>Fri, 11 Sep 2020 21:52:48 +0800</pubDate>
-      
-      <guid>https://Vallxy.github.io/post/scala%E4%B8%ADmapreduce%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E7%9A%84%E7%90%86%E8%A7%A3/</guid>
       <description></description>
     </item>
     

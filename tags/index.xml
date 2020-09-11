@@ -6,9 +6,28 @@
     <description>Recent content in Tags on Website of csh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Fri, 11 Sep 2020 22:10:05 +0800</lastBuildDate>
     
 	<atom:link href="https://Vallxy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>course</title>
+      <link>https://Vallxy.github.io/tags/course/</link>
+      <pubDate>Fri, 11 Sep 2020 22:10:05 +0800</pubDate>
+      
+      <guid>https://Vallxy.github.io/tags/course/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scala</title>
+      <link>https://Vallxy.github.io/tags/scala/</link>
+      <pubDate>Fri, 11 Sep 2020 21:52:48 +0800</pubDate>
+      
+      <guid>https://Vallxy.github.io/tags/scala/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
