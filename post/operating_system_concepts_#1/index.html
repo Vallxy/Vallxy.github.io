@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Cao Shaoheng | Operating System Concepts #1 </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.74.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="">
+    
+    <link rel="stylesheet" href="https://Vallxy.github.io/css/style.min.6944b209e291f52d1446204b7dc94a03d0156e3ab359b6ae37a54ab33a7230d4.css" integrity="sha256-aUSyCeKR9S0URiBLfclKA9AVbjqzWbauN6VKszpyMNQ=" crossorigin="anonymous" type="text/css"><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="https://Vallxy.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://Vallxy.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://Vallxy.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://Vallxy.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://Vallxy.github.io/post/operating_system_concepts_#1/">
+    
+    
+    <script type="text/javascript" src="https://Vallxy.github.io/js/anatole-header.min.7e2fc0724240b28c6e214687e73a4a6eb6c196bbace546b9dc86e94cca120b5c.js" integrity="sha256-fi/AckJAsoxuIUaH5zpKbrbBlrus5Ua53IbpTMoSC1w=" crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://Vallxy.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="Operating System Concepts #1"/>
+<meta name="twitter:description" content=""/>
+
+</head><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://Vallxy.github.io/images/profile.JPG" alt="profile picture">
+        <h3 title=""><a href="/">I&#39;m csh</a></h3>
+        <div class="description">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://github.com/Biadlo" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="mailto:1010047186@qq.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Cao Shaoheng 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+        
+        <li><a  href="/"  title="">Home</a></li>
+        
+        
+        <li><a  href="/post/"  title="">Posts</a></li>
+        
+        
+        <li><a  href="/about/"  title="">About</a></li>
+        
+        
+        <li class="theme-switch-item">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+        </li>
+    </ul>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>Operating System Concepts #1
+        </h3>
+        
+        <div class="info">
+          <i class="fa fa-sun-o"></i>
+          <span class="date">Mon, Sep 28, 2020</span>
+          <i class="fa fa-clock-o"></i><span class="reading-time">3-minute read</span>
+        </div>
+        
+        </div>
+
+    <h2 id="operating-system-concepts-1">Operating System Concepts #1</h2>
+<h3 id="chapter-2---operating-system-structures">Chapter 2   Operating System Structures</h3>
+<p>从三个角度来看操作系统：</p>
+<ol>
+<li>系统提供的服务</li>
+<li>用户与程序员可使用的接口</li>
+<li>操作系统的组成和内在联系</li>
+</ol>
+<h4 id="21-operating-system-services">2.1 Operating-System Services</h4>
+<p>对于用户有帮助的功能</p>
+<ol>
+<li>User Interface</li>
+<li>Program execution</li>
+<li>I/O operations</li>
+<li>File-system manipulation</li>
+<li>Communication</li>
+<li>Error detection</li>
+</ol>
+<p>帮助用户保证操作系统的高效性</p>
+<ol>
+<li>Resource allocation</li>
+<li>Logging</li>
+<li>Protection and security</li>
+</ol>
+<h4 id="22-user-and-operation-system-interface">2.2 User and Operation-System Interface</h4>
+<h5 id="221-command-interpreters">2.2.1 Command Interpreters</h5>
+<p>操作系统把它当作是一个在进程初始化或者用户第一次登陆交互式系统时运行的一个特殊程序</p>
+<p>shells</p>
+<p>shell命令的两种实现方法：</p>
+<ol>
+<li>
+<p>command interpreter对于每一个命令有自己的实现代码，添加一条需要调整command interpreter</p>
+</li>
+<li>
+<p>通过system program实现，command interpreter只控制将文件load进memory和executed (UNIX就是这种)，这种方法增加命令只需要创建新文件就可以了，不用动command interpreter</p>
+<blockquote>
+<p>Example：</p>
+<p>rm file.txt</p>
+<p>command interpreter要去找一个叫rm的文件，将其load入memory，然后带参数 file.txt 执行rm</p>
+</blockquote>
+</li>
+</ol>
+<h5 id="222-graphical-user-interface">2.2.2 Graphical User Interface</h5>
+<p>桌面 图标 文件夹</p>
+<h5 id="223-touch-screen-interface">2.2.3 Touch-Screen Interface</h5>
+<p>手势 springboard</p>
+<h5 id="224-choice-of-interface">2.2.4 Choice of Interface</h5>
+<p>system administrators, power users &mdash;&mdash;&mdash;&mdash;-command line</p>
+<h4 id="23-system-calls">2.3 System calls</h4>
+<ul>
+<li>system calls 提供了操作系统向外提供服务接口</li>
+</ul>
+<h5 id="232-application-programming-interface">2.3.2 Application Programming Interface</h5>
+<ul>
+<li>
+<p>Even simple programs may make heavy use of the operation system.</p>
+</li>
+<li>
+<p>API</p>
+</li>
+<li>
+<p>A programmer access an API via a library of code provided by the operation system. In the case of UNIX and Linux for programs written in the C language, the library is called libc.</p>
+</li>
+<li>
+<p>Each operating system has its own name for each system call.</p>
+</li>
+<li>
+<p>Why programming according to API rather than invoking actual system calls?</p>
+<ol>
+<li>program portability</li>
+<li>Actual system calls&mdash;&mdash;&mdash;&mdash;&ndash;detailed, difficult to work with</li>
+</ol>
+</li>
+<li>
+<p>run-time environment (RTE)</p>
+<blockquote>
+<p>RTE provides a <strong>system-call-interface</strong> that servers as the link to system calls.</p>
+<p>The system-call interface intercepts function calls in the API and invokes the necessary system calls within the operating system.</p>
+<p>code &mdash;-&gt; API &mdash;-&gt; system-call-interface &mdash;-&gt; system call</p>
+</blockquote>
+</li>
+<li>
+<p>Most detailed interface are hidden from the programmer by the API and are managed by the RTE.</p>
+</li>
+<li>
+<p>3 general methods to pass paramaters to the operating system</p>
+<ol>
+<li>
+<p>pass the parameters in register</p>
+</li>
+<li>
+<p>When parameters are too many, they are stored ina block, or table, in <strong>memory</strong>, and the <strong>address</strong> of the block is passed as parameter in a register.</p>
+</li>
+<li>
+<p>combination of 1 and 2 (Linux)</p>
+<blockquote>
+<p>if parameter number &gt; 5:</p>
+<p>​	use 2</p>
+<p>else:</p>
+<p>​	use 1</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ul>
+<h5 id="233-types-of-system-calls">2.3.3 Types of System Calls</h5>
+<ol>
+<li>Process Control</li>
+<li>File Management</li>
+<li>Device Management</li>
+<li>Information Maintenance</li>
+<li>Communication</li>
+<li>Protection</li>
+</ol>
+<h4 id="24-system-services">2.4 System Services</h4>
+<ol>
+<li>File management</li>
+<li>File modification</li>
+<li>Programming-language support</li>
+<li>Program loading and execution</li>
+<li>Communication</li>
+<li>Background services</li>
+</ol>
+<h4 id="25-linkers-and-loaders">2.5 Linkers and Loaders</h4>
+<ul>
+<li>source program &mdash;-&gt; <em>complier</em> &mdash;-&gt; object file (with other object files) &mdash;-&gt; <em>linker</em> &mdash;-&gt;executable file (with dynamically linked libraries) &mdash;-&gt; <em>loader</em> &mdash;-&gt; program in memory</li>
+</ul>
+<ul>
+<li>
+<p>Why use DLLs?</p>
+<p>avoid linking and loading libraries that may end up not being used into an executable file</p>
+</li>
+<li>
+<p>Executable and Linkable Format (ELF) in UNIX and Linux</p>
+</li>
+</ul>
+<h4 id="26-why-applications-are-operating-system-specific">2.6 Why Applications Are Operating-System Specific</h4>
+<ul>
+<li>
+<p>applications compiled on one operating system are not executable on other operating systems</p>
+</li>
+<li>
+<p>each operating system provides a unique set of system calls</p>
+</li>
+<li>
+<p>3 ways for an application available to run on multiple operating systems</p>
+<ol>
+<li>written in interpreted language (Python, Ruby)</li>
+<li>written in languages that includes a virtual machine</li>
+<li>use a standard language or API in which the compiler generates binaries in a machine- and operating-system-specified language. Then the application will be ported to different OS.</li>
+</ol>
+</li>
+<li>
+<p>application level &mdash;&mdash;&ndash; API</p>
+<p>architecture level &mdash;&mdash;&ndash; application binary interface (ABI) : low-level details</p>
+</li>
+</ul>
+<h4 id="27-operating-system-design-and-implementation">2.7 Operating-System Design and Implementation</h4>
+<h5 id="272-mechanisms-and-policies">2.7.2 Mechanisms and Policies</h5>
+<ul>
+<li>mechanism &mdash;&mdash;&ndash; how to do  (Interface)</li>
+<li>policy &mdash;&mdash;&ndash; what will be done  (Implementation)</li>
+</ul>
+<h4 id="28-operating-system-structure">2.8 Operating-System Structure</h4>
+<h5 id="281-monolithic-structure">2.8.1 Monolithic Structure</h5>
+<ul>
+<li>advantage: good performance, fast communication, speed, efficiency</li>
+<li>disadvantage: tightly coupled</li>
+</ul>
+<h5 id="282-layered-approach">2.8.2 Layered Approach</h5>
+<ul>
+<li>advantage: loosely coupled, simplicity of construction and debugging</li>
+<li>disadvantage: speed, the overhead of multilayered</li>
+</ul>
+<h5 id="283-microkernels">2.8.3 Microkernels</h5>
+<ul>
+<li>advantage: extending the os easily</li>
+<li>disadvantage: performance overhead</li>
+</ul>
+<h5 id="284-hybrid-system">2.8.4 hybrid system</h5>
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+        
+    <span class="separator"><a class="tag" href="/tags/os/">OS</a></span>
+
+      </div>
+    </div>
+
+    
+           
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://Vallxy.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript" src="https://Vallxy.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://Vallxy.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script></html></body>
+
+</html>
