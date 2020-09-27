@@ -21,15 +21,6 @@
     </item>
     
     <item>
-      <title>Operating System Concepts #1</title>
-      <link>https://Vallxy.github.io/post/operating_system_concepts_#1/</link>
-      <pubDate>Mon, 28 Sep 2020 00:51:08 +0800</pubDate>
-      
-      <guid>https://Vallxy.github.io/post/operating_system_concepts_#1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>商业模式</title>
       <link>https://Vallxy.github.io/post/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Fri, 11 Sep 2020 22:10:05 +0800</pubDate>
@@ -54,6 +45,19 @@
       
       <guid>https://Vallxy.github.io/post/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E4%B8%8E%E8%AE%A1%E7%AE%97ii/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://Vallxy.github.io/post/operating_system_concepts_#1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Vallxy.github.io/post/operating_system_concepts_#1/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;tags-os&#34;&gt;title: &amp;ldquo;Operating System Concepts #1&amp;rdquo;
+date: 2020-09-28T00:51:08+08:00
+draft: false
+tags: [OS]&lt;/h2&gt;</description>
     </item>
     
   </channel>
