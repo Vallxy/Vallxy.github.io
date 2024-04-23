@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I’m a Ph.D. candidate in the Software Institute of Nanjing University (NJU), supervised by [Prof. Xuandong Li](https://cs.nju.edu.cn/lixuandong/index.htm) and [Prof. Minxue Pan](https://minxuepan.github.io/). I'm also a member of Software Engineering Group (SEG) of the Department of Computer Science and Technology of Nanjing University
+I’m a Ph.D. candidate in the Software Institute of Nanjing University (NJU), supervised by [Prof. Xuandong Li](https://cs.nju.edu.cn/lixuandong/index.htm) and [Prof. Minxue Pan](https://minxuepan.github.io/). I'm also a member of the Software Engineering Group (SEG) of the Department of Computer Science and Technology of Nanjing University.
 
 Before my Ph.D., I obtained my bachelor degree from Nanjing University in the Software Institute.
 
@@ -43,13 +43,13 @@ Before my Ph.D., I obtained my bachelor degree from Nanjing University in the So
  </div> 
 
 # 🎖 Honors and Awards
-- Outstanding Graduates, Nanjing University
+- Outstanding Graduate, Nanjing University
 - First Prize of People's Scholarship, Nanjing University
-- Scholarship of Guo Rui, Nanjing University
+- Guo Rui Scholarship, Nanjing University
 - Suzhou Yucai Scholarship, Nanjing University
 
 # 📖 Educations
-- *2022 - now*, Ph.D. in Software Institute, Nanjing University.
+- *2022 - now*, Ph.D. candidate in Software Institute, Nanjing University.
 - *2018 - 2022*, B.S. in Software Institute, Nanjing University. 
 
 # 💻 Internships
