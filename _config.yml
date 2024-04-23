@@ -6,8 +6,8 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Shaoheng Cao (曹邵恒)"
-description              : "PhD candidate in Nanjing University."
+title                    : "Shaoheng Cao"
+description              : "Ph.D. candidate in Nanjing University."
 repository               : "Vallxy/Vallxy.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -21,7 +21,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Shaoheng Cao"
+  name             : "Shaoheng Cao (曹邵恒)"
   avatar           : "images/ICSE24.jpg"
   bio              : "Nanjing University"
   location         : "Nanjing, China"

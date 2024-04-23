@@ -21,7 +21,7 @@ I’m a Ph.D. candidate in the Software Institute of Nanjing University (NJU), s
 
 Before my Ph.D., I obtained my bachelor degree from Nanjing University in the Software Institute.
 
-<h2>Research Interest</h2>
+<h2>Research Interests</h2>
 <ul>
   <li>Test Repair</li>
   <li>GUI Testing</li>
