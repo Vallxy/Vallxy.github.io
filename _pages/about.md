@@ -37,9 +37,9 @@ Before my Ph.D., I obtained my bachelor degree from Nanjing University in the So
 # 📝 Publications 
 
 <div>
-  <div class="paper_title"><a href="https://dl.acm.org/doi/10.1145/3597503.3639108">Comprehensive Semantic Repair of Obsolete GUI Test Scripts for Mobile Applications</a></div>
-  <div class="paper_authors"><span class="author-emphasis">Shaoheng Cao</span>, Minxue Pan, Yu Pei, Wenhua Yang, Tian Zhang, Linzhang Wang, Xuandong Li.</div>
-  <div class="paper_presenter">&#91;ICSE'24&#92;The IEEE/ACM 46th International Conference on Software Engineering</div>
+  <div class="paper-title"><a href="https://dl.acm.org/doi/10.1145/3597503.3639108">Comprehensive Semantic Repair of Obsolete GUI Test Scripts for Mobile Applications</a></div>
+  <div class="paper-authors"><span class="author-emphasis">Shaoheng Cao</span>, Minxue Pan, Yu Pei, Wenhua Yang, Tian Zhang, Linzhang Wang, Xuandong Li</div>
+  <div class="paper-presenter">the IEEE/ACM 46th International Conference on Software Engineering &#91;ICSE'24&#93;</div>
  </div> 
 
 # 🎖 Honors and Awards
