@@ -21,7 +21,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Shaoheng Cao (曹邵恒)"
+  name             : "Shaoheng Cao \r\n (曹邵恒)"
   avatar           : "images/ICSE24.jpg"
   bio              : "Nanjing University"
   location         : "Nanjing, China"
