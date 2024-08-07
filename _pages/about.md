@@ -32,6 +32,7 @@ Before my Ph.D., I obtained my bachelor degree from Nanjing University in the So
 
 
 # 🔥 News
+- *2024.08*: &nbsp;🎉 One paper is accepted by ASE 2024.
 - *2023.10*: &nbsp;🎉 One paper is accepted by ICSE 2024.
 
 # 📝 Publications 
