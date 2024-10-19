@@ -35,7 +35,13 @@ Before my Ph.D., I obtained my bachelor degree from Nanjing University in the So
 - *2024.08*: &nbsp;🎉 One paper is accepted by ASE 2024.
 - *2023.10*: &nbsp;🎉 One paper is accepted by ICSE 2024.
 
-# 📝 Publications 
+# 📝 Publications
+
+<div>
+  <div class="paper-title"><a href="https://dl.acm.org/doi/10.1145/3691620.3695032">Beyond Manual Modeling: Automating GUI Model Generation Using Design Documents</a></div>
+  <div class="paper-authors"><span class="author-emphasis">Shaoheng Cao</span>, Renyi Chen, Minxue Pan, Wenhua Yang, Xuandong Li</div>
+  <div class="paper-presenter">the 39th IEEE/ACM International Conference on Automated Software Engineering &#91;ASE'24&#93;</div>
+ </div> 
 
 <div>
   <div class="paper-title"><a href="https://dl.acm.org/doi/10.1145/3597503.3639108">Comprehensive Semantic Repair of Obsolete GUI Test Scripts for Mobile Applications</a></div>
@@ -55,4 +61,4 @@ Before my Ph.D., I obtained my bachelor degree from Nanjing University in the So
 
 # 💻 Internships
 - *2023.03 - 2023.12*, Research Intern, Samsung Electronics（China）R&D Centre, Nanjing, China.
-- *2021.07 - 2021.08*, Sofware Engineerer, eBay’s China Center of Excellence, Shanghai, China.
+- *2021.07 - 2021.08*, Sofware Engineer, eBay’s China Center of Excellence, Shanghai, China.
