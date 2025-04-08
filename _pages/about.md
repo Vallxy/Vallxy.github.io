@@ -23,7 +23,7 @@ Before my Ph.D., I obtained my bachelor degree from Nanjing University in the So
 
 <h2>Research Interests</h2>
 <ul>
-  <li>Test Repair</li>
+  <li>Regression Testing</li>
   <li>GUI Testing</li>
   <li>Model-Based Testing</li>
   <li>Empirical Software Engineering</li>
@@ -32,10 +32,24 @@ Before my Ph.D., I obtained my bachelor degree from Nanjing University in the So
 
 
 # 🔥 News
+- *2025.03*: &nbsp;🎉 One paper is accepted by ISSTA 2025.
+- *2025.01*: &nbsp;🎉 One paper is accepted by FSE 2025.
 - *2024.08*: &nbsp;🎉 One paper is accepted by ASE 2024.
 - *2023.10*: &nbsp;🎉 One paper is accepted by ICSE 2024.
 
 # 📝 Publications
+
+<div>
+  <div class="paper-title"><a href="https://doi.org/10.1145/3728978">Intention-Based GUI Test Migration for Mobile Apps using Large Language Models</a></div>
+  <div class="paper-authors"><span class="author-emphasis">Shaoheng Cao</span>, Minxue Pan, Yuanhong Lan, Xuandong Li</div>
+  <div class="paper-presenter">the 34th edition of the ACM SIGSOFT International Symposium on Software Testing and Analysis &#91;ISSTA'25&#93;</div>
+ </div> 
+
+<div>
+  <div class="paper-title"><a href="https://doi.org/10.1145/3715789">A Mixed-Methods Study of Model-Based GUI Testing in Real-World Industrial Settings</a></div>
+  <div class="paper-authors"><span class="author-emphasis">Shaoheng Cao</span>, Renyi Chen, Wenhua Yang, Minxue Pan, Xuandong Li</div>
+  <div class="paper-presenter">The ACM International Conference on the Foundations of Software Engineering &#91;FSE'25&#93;</div>
+ </div> 
 
 <div>
   <div class="paper-title"><a href="https://dl.acm.org/doi/10.1145/3691620.3695032">Beyond Manual Modeling: Automating GUI Model Generation Using Design Documents</a></div>
