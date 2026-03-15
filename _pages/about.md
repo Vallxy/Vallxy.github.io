@@ -23,21 +23,26 @@ Before my Ph.D., I obtained my bachelor degree from Nanjing University in the So
 
 <h2>Research Interests</h2>
 <ul>
-  <li>Regression Testing</li>
   <li>GUI Testing</li>
-  <li>Model-Based Testing</li>
+  <li>AI4SE</li>
   <li>Empirical Software Engineering</li>
+  <li>GUI Agent</li>
 </ul>
 
-
-
 # 🔥 News
+- *2025.08*: &nbsp;🎉 One paper is accepted by ASE 2025.
 - *2025.03*: &nbsp;🎉 One paper is accepted by ISSTA 2025.
 - *2025.01*: &nbsp;🎉 One paper is accepted by FSE 2025.
 - *2024.08*: &nbsp;🎉 One paper is accepted by ASE 2024.
 - *2023.10*: &nbsp;🎉 One paper is accepted by ICSE 2024.
 
 # 📝 Publications
+
+<div>
+  <div class="paper-title"><a href="https://doi.org/10.1109/ASE63991.2025.00118">NATE: A Network-Aware Testing Enhancer for Network-Related Fault Detection in Android Apps</a></div>
+  <div class="paper-authors"> Yuanhong Lan, <span class="author-emphasis">Shaoheng Cao</span>, Yifei Lu, Minxue Pan, Xuandong Li</div>
+  <div class="paper-presenter">the 40th IEEE/ACM International Conference on Automated Software Engineering &#91;ASE'25&#93;</div>
+ </div> 
 
 <div>
   <div class="paper-title"><a href="https://doi.org/10.1145/3728978">Intention-Based GUI Test Migration for Mobile Apps using Large Language Models</a></div>
@@ -64,10 +69,22 @@ Before my Ph.D., I obtained my bachelor degree from Nanjing University in the So
  </div> 
 
 # 🎖 Honors and Awards
+- National Scholarship, Ministry of Education of the People's Republic of China
 - Outstanding Graduate, Nanjing University
 - First Prize of People's Scholarship, Nanjing University
 - Guo Rui Scholarship, Nanjing University
 - Suzhou Yucai Scholarship, Nanjing University
+  
+# 🗂 Projects
+
+<div>
+  <div class="project-title">China Association for Science and Technology Youth Talent Cultivation Project for Doctoral Students</div>
+</div>
+
+<div>
+  <div class="project-title">Postgraduate Research &amp; Practice Innovation Program of Jiangsu Province</div>
+  <div class="project-grant">Grant No. KYCX24_0228 &middot; Comprehensive Semantic-based Test Repair</div>
+</div>
 
 # 📖 Educations
 - *2022 - now*, Ph.D. candidate in Software Institute, Nanjing University.
