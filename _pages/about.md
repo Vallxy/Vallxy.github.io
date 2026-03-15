@@ -77,14 +77,15 @@ Before my Ph.D., I obtained my bachelor degree from Nanjing University in the So
   
 # 🗂 Projects
 
-<div>
-  <div class="project-title">China Association for Science and Technology Youth Talent Cultivation Project for Doctoral Students</div>
-</div>
-
-<div>
-  <div class="project-title">Postgraduate Research &amp; Practice Innovation Program of Jiangsu Province</div>
-  <div class="project-grant">Grant No. KYCX24_0228 &middot; Comprehensive Semantic-based Test Repair</div>
-</div>
+<ul class="project-list">
+  <li>
+    <div class="project-title">China Association for Science and Technology Youth Talent Cultivation Project for Doctoral Students</div>
+  </li>
+  <li>
+    <div class="project-title">Postgraduate Research &amp; Practice Innovation Program of Jiangsu Province</div>
+    <div class="project-grant">Grant No. KYCX24_0228 &middot; Comprehensive Semantic-based Test Repair</div>
+  </li>
+</ul>
 
 # 📖 Educations
 - *2022 - now*, Ph.D. candidate in Software Institute, Nanjing University.
