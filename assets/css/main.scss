@@ -129,17 +129,12 @@ h1:before, .anchor:before {
 .project-list {
     padding-left: 1.8em;
     li {
-        padding: 0.6em 0;
-        border-bottom: 1px #efefef solid;
-        &:last-child {
-            border-bottom: none;
-        }
+        padding: 0.2em 0;
     }
 }
 
 .project-title{
     font-weight: bold;
-    font-size: larger;
 }
 
 .project-grant{
