@@ -70,6 +70,7 @@ Before my Ph.D., I obtained my bachelor degree from Nanjing University in the So
 
 # 🎖 Honors and Awards
 - National Scholarship, Ministry of Education of the People's Republic of China
+- Huawei Scholarship, Nanjing Univeristy
 - Outstanding Graduate, Nanjing University
 - First Prize of People's Scholarship, Nanjing University
 - Guo Rui Scholarship, Nanjing University
