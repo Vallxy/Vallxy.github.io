@@ -80,7 +80,7 @@ Before my Ph.D., I obtained my bachelor degree from Nanjing University in the So
 
 <ul class="project-list">
   <li>
-    <div class="project-title">China Association for Science and Technology Youth Talent Cultivation Project for Doctoral Students</div>
+    <div class="project-title">Doctoral Student Program of the Young S&T Talents Cultivation Project, CAST</div>
   </li>
   <li>
     <div class="project-title">Postgraduate Research &amp; Practice Innovation Program of Jiangsu Province</div>
