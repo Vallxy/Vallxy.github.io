@@ -30,6 +30,7 @@ Before my Ph.D., I obtained my bachelor degree from Nanjing University in the So
 </ul>
 
 # 🔥 News
+- *2026.03*: &nbsp;🎉 One paper is accepted by FSE 2026.
 - *2025.08*: &nbsp;🎉 One paper is accepted by ASE 2025.
 - *2025.03*: &nbsp;🎉 One paper is accepted by ISSTA 2025.
 - *2025.01*: &nbsp;🎉 One paper is accepted by FSE 2025.
