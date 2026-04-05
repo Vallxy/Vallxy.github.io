@@ -24,9 +24,9 @@ Before my Ph.D., I obtained my bachelor degree from Nanjing University in the So
 <h2>Research Interests</h2>
 <ul>
   <li>GUI Testing</li>
-  <li>AI4SE</li>
-  <li>Empirical Software Engineering</li>
-  <li>GUI Agent</li>
+  <li>Model-driven Engineering</li>
+  <li>LLM for Software Engineering</li>
+  <li>Test Repair and Migration</li>
 </ul>
 
 # 🔥 News
