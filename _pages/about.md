@@ -38,6 +38,11 @@ Before my Ph.D., I obtained my bachelor degree from Nanjing University in the So
 - *2023.10*: &nbsp;🎉 One paper is accepted by ICSE 2024.
 
 # 📝 Publications
+<div>
+  <div class="paper-title"><a href="https://doi.org/10.1145/3808214">TUSR: A Test Unit-Based Framework for Repairing Obsolete GUI Test Scripts</a></div>
+  <div class="paper-authors"> <span class="author-emphasis">Shaoheng Cao</span>, Minxue Pan, Xuandong Li</div>
+  <div class="paper-presenter">The ACM International Conference on the Foundations of Software Engineering &#91;FSE'26&#93;</div>
+ </div> 
 
 <div>
   <div class="paper-title"><a href="https://doi.org/10.1109/ASE63991.2025.00118">NATE: A Network-Aware Testing Enhancer for Network-Related Fault Detection in Android Apps</a></div>
